@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --branco: #ffffff;
+  --preto: #171717;
+}
+
+body {
+  background-color: var(--preto);
+  color: var(--branco);
+}
