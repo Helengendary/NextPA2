@@ -13,7 +13,7 @@ export const CardHome = ({name, image, url, filmes, TVShows} : {
     {
         card: " flex flex-col items-center w-80 shadow-lg shadow-white rounded-xl m-12 border border-white p-4 justify-evenly text-center ",
         title: "font-bold text-[24px] ",
-        image: " rounded-xl m-2 bg-branco ",
+        image: " rounded-xl m-2 bg-branco hover:scale-110 ",
         list: " m-4 ",
     }
 

@@ -10,6 +10,10 @@ const nextConfig = {
                 source: "/search",
                 destination: "/search",
             },
+            {
+                source: "/server",
+                destination: "/server-side",
+            },
         ]
     }
 };

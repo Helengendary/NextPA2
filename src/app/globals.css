@@ -5,7 +5,8 @@
 :root {
   --branco: #ffffff;
   --preto: #171717;
-  --azul: #6e78e7;
+  --azul: #6e78e7; 
+  --azulescuro: #1d2799; 
 }
 
 body {

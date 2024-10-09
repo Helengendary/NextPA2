@@ -12,6 +12,7 @@ const config: Config = {
         branco: "var(--branco)",
         preto: "var(--preto)",
         azul: "var(--azul)",
+        azulescuro: "var(--azulescuro)",
       },
     },
   },

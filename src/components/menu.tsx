@@ -1,21 +1,23 @@
 import { ROUTES } from "@/constants/routes";
 import Link from "next/link";
 
-export const Menu = ({op1, op2} : {
+export const Menu = ({op1, op2, op3} : {
     op1: string;
     op2: string;
+    op3: string;
 }) => {
 
     const style = 
     {
-        bttn:"px-2 py-1 min-w-3.5 cursor-pointer",
-        nav: "bg-branco gap-3 font-robFont text-medium flex flex-row justify-around align-center p-3 text-preto"
+        bttn:"px-4 py-2 min-w-3.5 cursor-pointer bg-azulescuro text-branco font-bold rounded-xl ",
+        nav: " gap-3 font-robFont text-medium flex flex-row justify-around align-center p-3 text-preto bg-azul "
     }
 
     return (
     <nav className={style.nav}>
         <Link href={ROUTES.home} className={style.bttn}>{op1}</Link>
         <Link href={ROUTES.search} className={style.bttn}>{op2}</Link>
+        <Link href={ROUTES.server} className={style.bttn}>{op3}</Link>
     </nav>
     )
 }
