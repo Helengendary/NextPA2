@@ -5,7 +5,11 @@ const nextConfig = {
             {
                 source: "/",
                 destination: "/home",
-            }
+            },
+            {
+                source: "/search",
+                destination: "/search",
+            },
         ]
     }
 };

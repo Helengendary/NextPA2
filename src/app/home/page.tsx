@@ -1,4 +1,10 @@
 "use client"
+import { Dancing_Script } from 'next/font/google'
+ 
+const londris = Dancing_Script({
+  weight: '700',
+  subsets: ['latin'],
+})
 
 import {CardHome} from '@/components/cardHome'
 import { useEffect, useState } from "react";
@@ -27,13 +33,13 @@ const  Principal = () => {
     }, [])
 
     const style = {
-        titulo: " text-center m-2 text-[30px] font-bold underline "
+        titulo: " text-center m-2 text-[50px] "
     }
 
     return(
 
         <>
-            <h1 className={style.titulo}>API DA DISNEY</h1>
+            <h1 className={style.titulo + londris.className}>API DA DISNEY</h1>
             <div className="flex flex-wrap justify-center">
                 {characters.map((item) => {
                     return (

@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         branco: "var(--branco)",
         preto: "var(--preto)",
+        azul: "var(--azul)",
       },
     },
   },
