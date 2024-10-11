@@ -7,7 +7,7 @@ const londris = Dancing_Script({
 })
 
 import {CardHome} from '@/components/cardHome'
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 interface IData {
     name: string,
@@ -33,19 +33,21 @@ const  Principal = () => {
     }, [])
 
     const style = {
-        titulo: " text-center m-2 text-[50px] "
+        titulo: " text-center m-2 text-[50px] mt-24 "
     }
 
     return(
 
         <>
             <h1 className={style.titulo + londris.className}>API DA DISNEY</h1>
-            <div className="flex flex-wrap justify-center">
-                {characters.map((item) => {
-                    return (
-                        <CardHome name={item.name} url={item.sourceUrl} image={item.imageUrl} filmes={item.films} key={item.id} TVShows={item.tvShows}/>
-                    )
-                })}
+            <div className="flex flex-wrap justify-center text-branco">
+                <Suspense fallback={<div>Loadding...</div>}>
+                    {characters.map((item) => {
+                        return (
+                            <CardHome name={item.name} url={item.sourceUrl} image={item.imageUrl} filmes={item.films} key={item.id} TVShows={item.tvShows}/>
+                        )
+                    })}
+                </Suspense>
             </div>
         </>
     )

@@ -10,7 +10,7 @@ export const Menu = ({op1, op2, op3} : {
     const style = 
     {
         bttn:"px-4 py-2 min-w-3.5 cursor-pointer bg-azulescuro text-branco font-bold rounded-xl ",
-        nav: " gap-3 font-robFont text-medium flex flex-row justify-around align-center p-3 text-preto bg-azul "
+        nav: " gap-3 font-robFont text-medium flex flex-wrap justify-around align-center p-3 text-preto bg-[url(https://cdn.pixabay.com/animation/2023/07/13/14/22/14-22-36-485_512.gif)] fixed w-full top-0 z-[9999] "
     }
 
     return (

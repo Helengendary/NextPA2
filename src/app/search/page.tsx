@@ -47,15 +47,15 @@ const axiosPage = () => {
     }, [page, name, filme])
 
     const style = {
-        in: " text-branco m-4 p-2 bg-preto border-b-4 border-white focus:border-azul outline-none ",
-        titulo: " text-center m-2 text-[50px] ",
+        in: " text-branco bg-preto border-b-4 border-white focus:border-azul outline-none w-[90%] mx-[5%] my-8 ",
+        titulo: " text-center m-2 text-[50px] mt-24 ",
     }
 
     return(
         <div>
             <h1 className={style.titulo + londris.className}>Pesquisa api</h1>
             
-            <div className="flex flex-col mx-36 my-8">
+            <div className="flex flex-col ">
                 <input className={style.in} type="number" value={page} placeholder="Página 1/149" onChange={(e) => setpage(e.target.value)} />
                 <input className={style.in} type="text" value={name} placeholder="Nome do personagem" onChange={(e) => setname(e.target.value)} />
                 <input className={style.in} type="text" value={filme} placeholder="Filme de participação" onChange={(e) => setfilme(e.target.value)} />

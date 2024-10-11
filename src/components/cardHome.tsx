@@ -1,5 +1,4 @@
-import { list } from "postcss"
-
+import Link from "next/link"
 
 export const CardHome = ({name, image, url, filmes, TVShows} : {
     name: string,
@@ -11,17 +10,17 @@ export const CardHome = ({name, image, url, filmes, TVShows} : {
 
     const style = 
     {
-        card: " flex flex-col items-center w-80 shadow-lg shadow-white rounded-xl m-12 border border-white p-4 justify-evenly text-center ",
+        card: " flex flex-col items-center w-80 shadow-lg shadow-white rounded-xl m-12 border border-white p-4 justify-evenly text-center hover:scale-110 hover:z-[999] ",
         title: "font-bold text-[24px] ",
-        image: " rounded-xl m-2 bg-branco hover:scale-110 ",
+        image: " rounded-xl m-2 bg-branco ",
         list: " m-4 ",
     }
 
     return (
         <>
-            <div className={style.card}>
+            <Link href={url} className={style.card}><div>
                 <h1 className={style.title}>{name}</h1>
-                <a href={url}><img className={style.image} src={image} alt="Foto do Personagem" /></a>
+               <img className={style.image} src={image} alt="Foto do Personagem" />
                 <div className={ filmes[0] != null ? style.list : ""}>
                     <h3 className={style.title}>{ filmes[0] != null ? "Filmes" : null}</h3>
                     <ul className="list-disc">
@@ -42,7 +41,7 @@ export const CardHome = ({name, image, url, filmes, TVShows} : {
                             })}
                     </ul>
                 </div>
-            </div>
+            </div></Link>
         </>
     )
 }
